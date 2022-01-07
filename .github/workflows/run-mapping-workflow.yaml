@@ -1,16 +1,16 @@
-name: test S3M workflow
+name: run mapping workflow
 
 on:
-  push:
-    branches: [main, master]
-  pull_request:
-    branches: [main, master]
+  #push:
+  #  branches: [main, master]
+  #pull_request:
+  #  branches: [main, master]
   workflow_dispatch:
     branches:
       - '*'
 
 jobs:
-  test-S3M-workflow:
+  run-mapping-workflow:
     runs-on: ubuntu-latest
     container: rocker/geospatial:4.1.2
     #env:

@@ -1,4 +1,4 @@
-name: run S3M workflow
+name: test mapping workflow
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
       - '*'
 
 jobs:
-  run-S3M-workflow:
+  test-mapping-workflow:
     runs-on: ubuntu-latest
     container: rocker/geospatial:4.1.2
     #env:
