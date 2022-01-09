@@ -17,13 +17,15 @@ library(kableExtra)
 ################################################################################
 #
 #'
-#' Spatial packages
+#' Spatial and other mapping packages
 #'
 #
 ################################################################################
 
 library(sf)
 library(mapboxapi)
+library(malawi)
+library(leaflet)
 
 
 ################################################################################
@@ -36,3 +38,5 @@ library(mapboxapi)
 
 library(googledrive)
 library(readxl)
+library(flexdashboard)
+
