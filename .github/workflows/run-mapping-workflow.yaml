@@ -40,6 +40,14 @@ jobs:
         
       - name: Run workflow
         run: |
-          targets::tar_make()
+          targets::tar_make(nutrition_map_site)
         shell: Rscript {0}
+          
+      - name: Commit and push files
+        run: |
+          git config --global user.email "ernest@guevarra.io"
+          git config --global user.name "ernestguevarra"
+          git add .
+          git diff-index --quiet HEAD || git commit -m "deploy leaflet map"
+          git push
           

@@ -42,6 +42,6 @@ jobs:
         
       - name: Run workflow
         run: |
-          targets::tar_make()
+          targets::tar_make(leaflet_map)
         shell: Rscript {0}
           
