@@ -15,13 +15,20 @@ for (f in list.files(here::here("R"), full.names = TRUE)) source (f)
 
 # Groups of targets ------------------------------------------------------------
 
-## Sampling
+## Spatial
 spatial_data <- tar_plan(
   country = get_country(),
   regions = get_regions(),
   districts = get_districts(),
   ta_areas = get_ta_areas(),
-  lhz = get_lhz()
+  lhz = get_lhz(),
+  country_centroid = sf::st_centroid(country) |> 
+    sf::st_geometry() |> unlist(),
+  leaflet_map = create_leaflet_map(
+    username = "mapbox", 
+    country_centroid = country_centroid, 
+    data = districts
+  )
 )
 
 ## Read raw data
@@ -53,7 +60,12 @@ outputs <- tar_plan(
 
 ## Reports
 reports <- tar_plan(
-  ##
+  tar_render(
+    name = nutrition_map_site,
+    path = "reports/index.Rmd",
+    output_dir = "docs",
+    knit_root_dir = here::here()
+  )
 )
 
 ## Deploy targets

@@ -1,0 +1,25 @@
+---
+title: "Malawi Nutrition Mapping"
+output: 
+  flexdashboard::flex_dashboard:
+    theme:
+      version: 4
+      bootswatch: litera
+    orientation: rows
+    social: [ "twitter", "linkedin" ]
+    source_code: https://github.com/katilingban/malawi-nutrition-mapping
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+
+targets::tar_load(c(districts, leaflet_map))
+```
+
+Row
+-----------------------------------------------------------------------
+
+```{r}
+leaflet_map
+```
+
