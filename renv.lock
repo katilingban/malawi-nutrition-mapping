@@ -111,6 +111,14 @@
         "digest"
       ]
     },
+    "backports": {
+      "Package": "backports",
+      "Version": "1.4.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "c39fbec8a30d23e721980b8afb31984c",
+      "Requirements": []
+    },
     "base64enc": {
       "Package": "base64enc",
       "Version": "0.1-3",
@@ -118,6 +126,16 @@
       "Repository": "CRAN",
       "Hash": "543776ae6848fde2f48ff3816d0628bc",
       "Requirements": []
+    },
+    "base64url": {
+      "Package": "base64url",
+      "Version": "1.4",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "0c54cf3a08cc0e550fbd64ad33166143",
+      "Requirements": [
+        "backports"
+      ]
     },
     "bit": {
       "Package": "bit",
@@ -375,10 +393,10 @@
     },
     "fansi": {
       "Package": "fansi",
-      "Version": "0.5.0",
+      "Version": "1.0.0",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "d447b40982c576a72b779f0a3b3da227",
+      "Repository": "RSPM",
+      "Hash": "ae34c3d1fdfac1566ca17c1b5d8f2613",
       "Requirements": []
     },
     "farver": {
@@ -861,14 +879,14 @@
       "Package": "malawi",
       "Version": "0.0.0.9000",
       "Source": "GitHub",
-      "Remotes": "github::dickoa/rhdx",
       "RemoteType": "github",
+      "Remotes": "github::dickoa/rhdx",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "malawi",
       "RemoteUsername": "spatialworks",
       "RemoteRef": "HEAD",
       "RemoteSha": "d8bc21098592040490cd75bedc22a264b86a7202",
-      "Hash": "5a23cd6ae0c16b0a71235dbb8b30fa33",
+      "Hash": "860e27d85e941ebb28372e761485bc41",
       "Requirements": [
         "magrittr",
         "rhdx",
@@ -1457,10 +1475,10 @@
     },
     "tarchetypes": {
       "Package": "tarchetypes",
-      "Version": "0.4.0",
+      "Version": "0.4.1",
       "Source": "Repository",
       "Repository": "RSPM",
-      "Hash": "94271341eb2d132cdb7d8bd86a340416",
+      "Hash": "24c9eb58a70cef665befbcc9891572de",
       "Requirements": [
         "digest",
         "dplyr",
@@ -1475,12 +1493,13 @@
     },
     "targets": {
       "Package": "targets",
-      "Version": "0.9.0",
+      "Version": "0.10.0",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "e4868558d1403b84942e30c92434e128",
+      "Repository": "RSPM",
+      "Hash": "bd9b5c201537ae9e9bf3e8addbeb4218",
       "Requirements": [
         "R6",
+        "base64url",
         "callr",
         "cli",
         "codetools",
